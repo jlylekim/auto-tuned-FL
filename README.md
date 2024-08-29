@@ -1,4 +1,4 @@
-# Federated-Learning (PyTorch)
+# Federated-Learning with Auto-Tuned Clients
 
 Pytorch implmentation of the paper [Adaptive Federated Learning with Auto-Tuned Clients](https://openreview.net/forum?id=g0mlwqs8pi), modified from
 [this repository](https://github.com/AshwinRJ/Federated-Learning-PyTorch).
@@ -15,12 +15,12 @@ Required packages can be found in `requirments.txt`.
 ## Usage
 * To run an image classification experiment on CIFAR100 dataset using ResNet-18:
 ```
-python src/federated_main_cuda0.py --model=resnet18 --dataset=cifar100 --alg=fedavg \
+python src/run_main.py --model=resnet18 --dataset=cifar100 --alg=fedavg \
 --diric=1 --epochs=2000 --optimizer=adsgd --exp_name=exp1 --local_bs=64 --local_ep=1 
 ```
 * To run a text classification experiment on Agnews dataset using DistilBERT:
 ```
-python src/federated_main_cuda0.py --is_text=true --model=bert --dataset=agnews --alg=fedavg \
+python src/run_main.py --is_text=true --model=bert --dataset=agnews --alg=fedavg \
 --diric=1 --epochs=2000 --optimizer=adsgd --exp_name=exp1 --local_bs=64 --local_ep=1 
 ```
 There are other parameters---please refer to the options section below.
